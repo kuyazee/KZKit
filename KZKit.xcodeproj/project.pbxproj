@@ -15,7 +15,7 @@
 		A6FAC73C1E488F0D00C99A47 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FAC7371E488F0D00C99A47 /* ErrorView.swift */; };
 		A6FAC73D1E488F0D00C99A47 /* KZEVHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FAC7381E488F0D00C99A47 /* KZEVHelper.swift */; };
 		A6FAC73E1E488F0D00C99A47 /* KZLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FAC7391E488F0D00C99A47 /* KZLogger.swift */; };
-		A6FAC7401E488F7800C99A47 /* KZKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A6FAC73F1E488F7800C99A47 /* KZKit.podspec */; };
+		A6FAC7421E48916B00C99A47 /* KZKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A6FAC7411E48916B00C99A47 /* KZKit.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,7 @@
 		A6FAC7371E488F0D00C99A47 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A6FAC7381E488F0D00C99A47 /* KZEVHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZEVHelper.swift; sourceTree = "<group>"; };
 		A6FAC7391E488F0D00C99A47 /* KZLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZLogger.swift; sourceTree = "<group>"; };
-		A6FAC73F1E488F7800C99A47 /* KZKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KZKit.podspec; path = KZKit/KZKit.podspec; sourceTree = "<group>"; };
+		A6FAC7411E48916B00C99A47 /* KZKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KZKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 		A6FAC7111E488EF300C99A47 = {
 			isa = PBXGroup;
 			children = (
-				A6FAC73F1E488F7800C99A47 /* KZKit.podspec */,
+				A6FAC7411E48916B00C99A47 /* KZKit.podspec */,
 				A6FAC71D1E488EF300C99A47 /* KZKit */,
 				A6FAC7281E488EF400C99A47 /* KZKitTests */,
 				A6FAC71C1E488EF300C99A47 /* Products */,
@@ -197,8 +197,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6FAC7401E488F7800C99A47 /* KZKit.podspec in Resources */,
 				A6FAC73A1E488F0D00C99A47 /* ic_warning.png in Resources */,
+				A6FAC7421E48916B00C99A47 /* KZKit.podspec in Resources */,
 				A6FAC73B1E488F0D00C99A47 /* ErrorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
