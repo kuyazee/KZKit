@@ -9,6 +9,6 @@
 import UIKit
 
 class KZEVHelper {
-    static var frameworkBundleId = "com.KZErrorView"
+    static var frameworkBundleId = "com.KZKit"
     static var frameWorkBundle = NSBundle(identifier: frameworkBundleId)
 }
