@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ErrorView" id="iN0-l3-epB" customClass="ErrorView" customModule="KZErrorView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qq2-Yc-FAb">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is a problem with your connection try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcp-eV-sDm">
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                    <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqj-pM-n6d">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="119" id="kSI-Pe-H12"/>
+                        <constraint firstAttribute="height" constant="30" id="o8l-qG-7yZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                    <state key="normal" title="Retry">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="y4v-C7-bLY">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="mTV-GY-Ifv"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qq2-Yc-FAb" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="4Lf-lv-Rrr"/>
+                <constraint firstItem="Lcp-eV-sDm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="6by-66-wPf"/>
+                <constraint firstItem="qqj-pM-n6d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FeW-gh-B9h"/>
+                <constraint firstItem="qq2-Yc-FAb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KR8-l8-UWc"/>
+                <constraint firstItem="qq2-Yc-FAb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="KqO-ev-l0z"/>
+                <constraint firstItem="y4v-C7-bLY" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="XV2-Mp-isF"/>
+                <constraint firstItem="qq2-Yc-FAb" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="XmC-rE-SJl"/>
+                <constraint firstAttribute="trailing" secondItem="Lcp-eV-sDm" secondAttribute="trailing" constant="20" id="eDq-1q-eHc"/>
+                <constraint firstItem="Lcp-eV-sDm" firstAttribute="top" secondItem="y4v-C7-bLY" secondAttribute="bottom" constant="8" id="ipb-D7-o2e"/>
+                <constraint firstItem="y4v-C7-bLY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-50" id="lUk-po-8ba"/>
+                <constraint firstItem="y4v-C7-bLY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pwP-dw-FOE"/>
+                <constraint firstItem="qqj-pM-n6d" firstAttribute="top" secondItem="Lcp-eV-sDm" secondAttribute="bottom" constant="23" id="ugc-Jq-D7j"/>
+                <constraint firstItem="Lcp-eV-sDm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wpf-rd-W7G"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundView" destination="qq2-Yc-FAb" id="94G-WL-BAb"/>
+                <outlet property="btnAction" destination="qqj-pM-n6d" id="hHm-1c-hsd"/>
+                <outlet property="centerconstraint" destination="lUk-po-8ba" id="Evg-D3-gnL"/>
+                <outlet property="imgPhoto" destination="y4v-C7-bLY" id="iFW-Fm-NIw"/>
+                <outlet property="lblMessage" destination="Lcp-eV-sDm" id="EVL-nY-pSN"/>
+            </connections>
+            <point key="canvasLocation" x="10.5" y="25.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_warning.png" width="512" height="512"/>
+    </resources>
+</document>
