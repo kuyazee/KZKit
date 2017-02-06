@@ -10,7 +10,7 @@ s.social_media_url   = "http://twitter.com/kuyazee"
 
 s.platform     = :ios, "8.0"
 s.requires_arc = true
-s.source       = { :git => "https://github.com/kuyazee/KZLogger.git", :tag => "#{s.version}" }
+s.source       = { :git => "https://github.com/kuyazee/KZKit.git", :tag => "#{s.version}" }
 s.source_files  = "KZKit", "KZKit/**/*.{h,swift}"
 
 end
