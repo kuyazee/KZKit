@@ -12,8 +12,7 @@
 		A6FAC72C1E488EF400C99A47 /* KZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FAC71E1E488EF300C99A47 /* KZKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FAC73A1E488F0D00C99A47 /* ic_warning.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FAC7351E488F0D00C99A47 /* ic_warning.png */; };
 		A6FAC73B1E488F0D00C99A47 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6FAC7361E488F0D00C99A47 /* ErrorView.xib */; };
-		A6FAC73C1E488F0D00C99A47 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FAC7371E488F0D00C99A47 /* ErrorView.swift */; };
-		A6FAC73D1E488F0D00C99A47 /* KZEVHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FAC7381E488F0D00C99A47 /* KZEVHelper.swift */; };
+		A6FAC73C1E488F0D00C99A47 /* KZOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FAC7371E488F0D00C99A47 /* KZOverlayView.swift */; };
 		A6FAC73E1E488F0D00C99A47 /* KZLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FAC7391E488F0D00C99A47 /* KZLogger.swift */; };
 		A6FAC7421E48916B00C99A47 /* KZKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A6FAC7411E48916B00C99A47 /* KZKit.podspec */; };
 /* End PBXBuildFile section */
@@ -37,8 +36,7 @@
 		A6FAC72B1E488EF400C99A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6FAC7351E488F0D00C99A47 /* ic_warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_warning.png; sourceTree = "<group>"; };
 		A6FAC7361E488F0D00C99A47 /* ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
-		A6FAC7371E488F0D00C99A47 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		A6FAC7381E488F0D00C99A47 /* KZEVHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZEVHelper.swift; sourceTree = "<group>"; };
+		A6FAC7371E488F0D00C99A47 /* KZOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZOverlayView.swift; sourceTree = "<group>"; };
 		A6FAC7391E488F0D00C99A47 /* KZLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZLogger.swift; sourceTree = "<group>"; };
 		A6FAC7411E48916B00C99A47 /* KZKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KZKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,8 +86,7 @@
 				A6FAC71F1E488EF300C99A47 /* Info.plist */,
 				A6FAC7351E488F0D00C99A47 /* ic_warning.png */,
 				A6FAC7361E488F0D00C99A47 /* ErrorView.xib */,
-				A6FAC7371E488F0D00C99A47 /* ErrorView.swift */,
-				A6FAC7381E488F0D00C99A47 /* KZEVHelper.swift */,
+				A6FAC7371E488F0D00C99A47 /* KZOverlayView.swift */,
 				A6FAC7391E488F0D00C99A47 /* KZLogger.swift */,
 			);
 			path = KZKit;
@@ -217,9 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6FAC73C1E488F0D00C99A47 /* ErrorView.swift in Sources */,
+				A6FAC73C1E488F0D00C99A47 /* KZOverlayView.swift in Sources */,
 				A6FAC73E1E488F0D00C99A47 /* KZLogger.swift in Sources */,
-				A6FAC73D1E488F0D00C99A47 /* KZEVHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
