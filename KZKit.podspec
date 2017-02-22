@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "KZKit"
-s.version      = "0.0.3"
+s.version      = "0.0.4"
 s.summary      = "debug logger replacement for swift instead of using print(items:Any...)"
 s.license      = { :type => "MIT", :file => "LICENSE" }
 s.homepage     = "https://github.com/kuyazee/KZKit"

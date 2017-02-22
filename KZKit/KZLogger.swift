@@ -9,7 +9,7 @@
 import UIKit
 
 public class KZLogger {
-    private static var sharedInstance = KZLogger()
+    private static let shared = KZLogger()
     private var showLog:Bool = false
     private var appName:String = "KZLogger"
     private var showFileNames:Bool = false
@@ -22,46 +22,46 @@ public class KZLogger {
         return configure(showLogs: bool, appName: appName, showFileNames: false, showFunctionNames: false, showDate: false, showApiLogs: false)
     }
     
-//    public static func configure(showLogs bool:Bool, appName:String) -> KZLogger {
-//        
-//    }
-    
     public static func configure(showLogs bool:Bool, appName:String, showFileNames:Bool, showFunctionNames:Bool, showDate:Bool, showApiLogs:Bool) -> KZLogger {
-        KZLogger.sharedInstance.showLog = bool
-        KZLogger.sharedInstance.appName = appName
+        KZLogger.shared.showLog = bool
+        KZLogger.shared.appName = appName
         
-        KZLogger.sharedInstance.showFileNames = showFileNames
+        KZLogger.shared.showFileNames = showFileNames
         
-        KZLogger.sharedInstance.showFunctionNames = showFunctionNames
-        KZLogger.sharedInstance.showDate = showDate
-        KZLogger.sharedInstance.showApiLogs = showApiLogs
-        return KZLogger.sharedInstance
+        KZLogger.shared.showFunctionNames = showFunctionNames
+        KZLogger.shared.showDate = showDate
+        KZLogger.shared.showApiLogs = showApiLogs
+        return KZLogger.shared
+    }
+    
+    public func show(items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
+        var printString:String = "↘️ "
+        
+        if showDate {
+            printString += "\(NSDate()) "
+        }
+        
+        printString += "<\(KZLogger.shared.appName)> "
+        
+        if showFileNames {
+            printString += "\(NSURL(string: file)!.lastPathComponent!):\(line) "
+        }
+        
+        if showFunctionNames {
+            printString += "<FunctionName:\(function)> "
+        }
+        
+        for item in items {
+            printString += "\(item) "
+        }
+        
+        print(printString)
     }
     
     public func debug(items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
         switch showLog {
         case true:
-            var printString:String = "↘️ "
-            
-            if showDate {
-                printString += "\(NSDate()) "
-            }
-            
-            printString += "<\(KZLogger.sharedInstance.appName)> "
-            
-            if showFileNames {
-                printString += "\(NSURL(string: file)!.lastPathComponent!):\(line) "
-            }
-            
-            if showFunctionNames {
-                printString += "<FunctionName:\(function)> "
-            }
-            
-            for item in items {
-                printString += "\(item) "
-            }
-            
-            print(printString)
+            show(items, file: file, function: function, line: line)
         case false:
             break
         }
@@ -76,7 +76,7 @@ public class KZLogger {
                 printString += "\(NSDate()) "
             }
             
-            printString += "<\(KZLogger.sharedInstance.appName)> "
+            printString += "<\(KZLogger.shared.appName)> "
             
             if showFileNames {
                 printString += "\(NSURL(string: file)!.lastPathComponent!):\(line) "
