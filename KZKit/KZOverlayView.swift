@@ -10,17 +10,17 @@ import UIKit
 import ObjectiveC
 
 public extension UIView {
-    private struct ErrorKeys {
+    fileprivate struct ErrorKeys {
         static var Message  = "KZErrorMessage"
     }
     
-    public func showOverLayView(view:UIView) {
+    public func showOverLayView(_ view:UIView) {
         if let _ = objc_getAssociatedObject(self, &ErrorKeys.Message) as? UIView {
             return
         }
         
         view.frame = bounds
-        makeErrorView(view)
+        _ = makeErrorView(view)
     }
     
     public func hideOverlayView() {
@@ -30,7 +30,7 @@ public extension UIView {
         }
     }
     
-    private func makeErrorView(view:UIView) -> UIView {
+    fileprivate func makeErrorView(_ view:UIView) -> UIView {
         objc_setAssociatedObject(self, &ErrorKeys.Message, view, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         addSubview(view)
         return view

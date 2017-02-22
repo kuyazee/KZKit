@@ -8,21 +8,21 @@
 
 import UIKit
 
-public class KZLogger {
-    private static let shared = KZLogger()
-    private var showLog:Bool = false
-    private var appName:String = "KZLogger"
-    private var showFileNames:Bool = false
-    private var showFunctionNames:Bool = false
-    private var showApiLogs:Bool = false
+open class KZLogger {
+    fileprivate static let shared = KZLogger()
+    fileprivate var showLog:Bool = false
+    fileprivate var appName:String = "KZLogger"
+    fileprivate var showFileNames:Bool = false
+    fileprivate var showFunctionNames:Bool = false
+    fileprivate var showApiLogs:Bool = false
     
-    private var showDate:Bool = false
+    fileprivate var showDate:Bool = false
     
-    public static func configure(showLogs bool:Bool, appName:String) -> KZLogger {
+    open static func configure(showLogs bool:Bool, appName:String) -> KZLogger {
         return configure(showLogs: bool, appName: appName, showFileNames: false, showFunctionNames: false, showDate: false, showApiLogs: false)
     }
     
-    public static func configure(showLogs bool:Bool, appName:String, showFileNames:Bool, showFunctionNames:Bool, showDate:Bool, showApiLogs:Bool) -> KZLogger {
+    open static func configure(showLogs bool:Bool, appName:String, showFileNames:Bool, showFunctionNames:Bool, showDate:Bool, showApiLogs:Bool) -> KZLogger {
         KZLogger.shared.showLog = bool
         KZLogger.shared.appName = appName
         
@@ -34,17 +34,17 @@ public class KZLogger {
         return KZLogger.shared
     }
     
-    public func show(items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
+    open func show(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
         var printString:String = "↘️ "
         
         if showDate {
-            printString += "\(NSDate()) "
+            printString += "\(Date()) "
         }
         
         printString += "<\(KZLogger.shared.appName)> "
         
         if showFileNames {
-            printString += "\(NSURL(string: file)!.lastPathComponent!):\(line) "
+            printString += "\(URL(string: file)!.lastPathComponent):\(line) "
         }
         
         if showFunctionNames {
@@ -58,7 +58,7 @@ public class KZLogger {
         print(printString)
     }
     
-    public func debug(items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
+    open func debug(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
         switch showLog {
         case true:
             show(items, file: file, function: function, line: line)
@@ -67,19 +67,19 @@ public class KZLogger {
         }
     }
     
-    public func apiPrint(items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
+    open func apiPrint(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
         switch showLog {
         case true:
             var printString:String = "↘️JSON↘️ "
             
             if showDate {
-                printString += "\(NSDate()) "
+                printString += "\(Date()) "
             }
             
             printString += "<\(KZLogger.shared.appName)> "
             
             if showFileNames {
-                printString += "\(NSURL(string: file)!.lastPathComponent!):\(line) "
+                printString += "\(URL(string: file)!.lastPathComponent):\(line) "
             }
             
 //            if showFunctionNames {
@@ -111,14 +111,14 @@ public enum KZLogColor: String {
     
     public func name() -> String {
         switch self {
-        case black: return "Black"
-        case red: return "Red"
-        case green: return "Green"
-        case yellow: return "Yellow"
-        case blue: return "Blue"
-        case magenta: return "Magenta"
-        case cyan: return "Cyan"
-        case white: return "White"
+        case .black: return "Black"
+        case .red: return "Red"
+        case .green: return "Green"
+        case .yellow: return "Yellow"
+        case .blue: return "Blue"
+        case .magenta: return "Magenta"
+        case .cyan: return "Cyan"
+        case .white: return "White"
         }
     }
     
